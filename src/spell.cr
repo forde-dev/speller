@@ -22,10 +22,10 @@ def word_arr
 end
 
 # this cross referrences the array of words with a txt file of all words
-def is_spellError
+def is_spellError(lang)
   arry = word_arr
   # TODO: research and think of more effiecient ways to compare
-  File.each_line("../dictionary/some_en_words.txt") do |line|
+  File.each_line(lang) do |line|
     if arry.includes? line
         arry.delete(line)
     end
@@ -37,4 +37,5 @@ def is_spellError
   end
 end
 
-puts is_spellError
+en = "../dictionary/some_en_words.txt"
+puts is_spellError(en)
