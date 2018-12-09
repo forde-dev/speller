@@ -8,8 +8,7 @@ end
 
 # this formats the string so that its only words made up of letters
 def format_string(string)
-  string = string.downcase
-  string = string.gsub(/[^a-z ]/i, " ")
+  string = string.downcase.gsub(/[^a-z ]/i, " ")
   return string
 end
 
