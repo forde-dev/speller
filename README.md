@@ -20,5 +20,5 @@ To be system wide spellcheaker using crystal
 
 #### Current Output
 for example i highlighted all the text above *Current Output* and ran the program, this was the current output:
-![image]("/img/speller_test.png")
+![image](/img/speller_test.png)
 note: i cant spell, hence why im doing this project
