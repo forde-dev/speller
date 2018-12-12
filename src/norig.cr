@@ -1,17 +1,20 @@
-# def words(text)
-#   text.downcase.scan(/[a-z]+/)
-# end
+require "spell.cr"
 
 def dictionary(words)
   model = Hash.new(1)
-  words.each {|f| model[f] += 1 }
+  words.each do |f|
+    model[f] += 1
+  end
   return model
 end
 
+
 lotsofwords = File.read("../dictionary/holmes.txt")
+
+
 LETTERS = ("a".."z").to_a.join
 
-puts lotsofwords
+puts dictionary(word_arr(lotsofwords))
 
 
 # def edits1(word)

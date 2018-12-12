@@ -13,8 +13,8 @@ def format_string(string)
 end
 
 # this splits every word into an array
-def word_arr
-  string = format_string(xsel)
+def word_arr(string)
+  string = format_string(string)
   output = string.split(" ")
   output.delete("")
   return output
@@ -22,7 +22,7 @@ end
 
 # this cross referrences the array of words with a txt file of all words
 def is_spellError(lang)
-  arry = word_arr
+  arry = word_arr(xsel)
   # TODO: research and think of more effiecient ways to compare
   File.each_line(lang) do |line|
     if arry.includes? line
@@ -38,3 +38,17 @@ end
 
 en = "../dictionary/some_en_words.txt"
 puts is_spellError(en)
+
+def dictionary(words)
+  model = Hash(String, Int32).new
+  words.each do |f|
+    model[f] += 1
+  end
+  return model
+end
+
+
+lotsofwords = File.read("../dictionary/holmes.txt")
+
+
+puts dictionary(word_arr(lotsofwords))
