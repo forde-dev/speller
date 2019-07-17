@@ -32,9 +32,10 @@ module Checker
           end
         end
         if arry.empty?
-          return "There is no spelling errors"
+          puts "There is no spelling errors"
         else
-          return {"spelling_error" => arry}
+          puts "spelling_error", arry
+          return arry
         end
     end
 end

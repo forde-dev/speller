@@ -6,12 +6,22 @@ require "./utils.cr"
 module Speller
   VERSION = "0.1.0"
   LANG = "data/en.txt"
+
+  include Checker
+  include Norvig
+
+  def spell
+    errors = spell_checker(LANG)
+    if errors
+      errors.each do |w|
+        words = corrector_one(w)
+        puts known(words)
+      end
+    end
+  end
+
 end
 
 include Speller
-include Checker
-include Norvig
 
-puts spell_checker(LANG)
-test = corrector("mik")
-puts known(test)
+spell

@@ -76,7 +76,7 @@ module Norvig
 
     # `corrector` takes in a miss spelt word as a string and
     # corrects the spelling error of one letter 
-    def corrector(word : String)
+    def corrector_one(word : String)
         splits = [] of Tuple(String, String)
         range = (0...word.size).to_a
         range.each do |i|
@@ -113,6 +113,18 @@ module Norvig
         set = deletes + transposes + replaces + inserts
         return set
 
+    end
+
+    def corrector_two(word : String)
+        set = [] of String
+        corrector = corrector_one(word)
+        corrector.each do |w|
+            corrector_again = corrector_one(w)
+            corrector_again.each do |q|
+               set << q 
+            end
+        end
+        return set
     end
 
     def known(words : Array)
