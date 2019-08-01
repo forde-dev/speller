@@ -7,13 +7,13 @@ def xsel
 end
 
 # this formats the string so that its only words made up of letters
-def format_string(string)
+def format_string(string : String)
   string = string.downcase.gsub(/[^a-z ]/i, " ")
   return string
 end
 
 # this splits every word into an array
-def word_arr(string)
+def word_arr(string : String)
   string = format_string(string)
   output = string.split(" ")
   output.delete("")
@@ -21,7 +21,7 @@ def word_arr(string)
 end
 
 # this cross referrences the array of words with a txt file of all words
-def is_spellError(lang)
+def is_spellError(lang : String)
   arry = word_arr(xsel)
   # TODO: research and think of more effiecient ways to compare
   File.each_line(lang) do |line|
@@ -36,19 +36,19 @@ def is_spellError(lang)
   end
 end
 
-en = "../dictionary/some_en_words.txt"
+en = "dictionary/some_en_words.txt"
 puts is_spellError(en)
 
-def dictionary(words)
-  model = Hash(String, Int32).new
-  words.each do |f|
-    model[f] += 1
-  end
-  return model
-end
+# def dictionary(words)
+#   model = Hash(String, Int32).new
+#   words.each do |f|
+#     model[f] += 1
+#   end
+#   return model
+# end
 
 
-lotsofwords = File.read("../dictionary/holmes.txt")
+# lotsofwords = File.read("../dictionary/holmes.txt")
 
 
-puts dictionary(word_arr(lotsofwords))
+# puts dictionary(word_arr(lotsofwords))
