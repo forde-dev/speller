@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/fordetek/speller">
+  <title>Speller - github.com/fordetek/speller</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Checker" data-name="checker">
+      <a href="Checker.html">Checker</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/CheckerTools" data-name="checkertools">
+      <a href="CheckerTools.html">CheckerTools</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Hasher" data-name="hasher">
+      <a href="Hasher.html">Hasher</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Norvig" data-name="norvig">
+      <a href="Norvig.html">Norvig</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/NumberTools" data-name="numbertools">
+      <a href="NumberTools.html">NumberTools</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/fordetek/speller/Speller" data-name="speller">
+      <a href="Speller.html">Speller</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/WordTools" data-name="wordtools">
+      <a href="WordTools.html">WordTools</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Speller
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p><code><a href="Speller.html">Speller</a></code> is a system wide spell check program</p>
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="Checker.html">Checker</a></li>
+  
+    <li class="other-type"><a href="Norvig.html">Norvig</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/speller.cr#L6" target="_blank">
+        speller.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="LANG">
+        <strong>LANG</strong> = <code><span class="s">&quot;data/en.txt&quot;</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#spell-instance-method" class="signature"><strong>#spell</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="Norvig.html">Norvig</a></code></h3>
+  
+  
+    <a href="Norvig.html#corrector_one(word:String)-instance-method" class="tooltip">
+      <span>corrector_one(word : String)</span>
+    corrector_one</a>, 
+    
+  
+    <a href="Norvig.html#corrector_two(word:String)-instance-method" class="tooltip">
+      <span>corrector_two(word : String)</span>
+    corrector_two</a>, 
+    
+  
+    <a href="Norvig.html#known(words:Array)-instance-method" class="tooltip">
+      <span>known(words : Array)</span>
+    known</a>, 
+    
+  
+    <a href="Norvig.html#probability(word:String)-instance-method" class="tooltip">
+      <span>probability(word : String)</span>
+    probability</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="NumberTools.html">NumberTools</a></code></h3>
+  
+  
+    <a href="NumberTools.html#sum(elements)-instance-method" class="tooltip">
+      <span>sum(elements)</span>
+    sum</a>, 
+    
+  
+    <a href="NumberTools.html#sum_f64(elements)-instance-method" class="tooltip">
+      <span>sum_f64(elements)</span>
+    sum_f64</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="WordTools.html">WordTools</a></code></h3>
+  
+  
+    <a href="WordTools.html#file_formatter(filename:String)-instance-method" class="tooltip">
+      <span>file_formatter(filename : String)</span>
+    file_formatter</a>, 
+    
+  
+    <a href="WordTools.html#formatter(s:String)-instance-method" class="tooltip">
+      <span>formatter(s : String)</span>
+    formatter</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="Hasher.html">Hasher</a></code></h3>
+  
+  
+    <a href="Hasher.html#hasher(words:Array)-instance-method" class="tooltip">
+      <span>hasher(words : Array)</span>
+    hasher</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="Checker.html">Checker</a></code></h3>
+  
+  
+    <a href="Checker.html#spell_checker(lang:String)-instance-method" class="tooltip">
+      <span>spell_checker(lang : String)</span>
+    spell_checker</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="CheckerTools.html">CheckerTools</a></code></h3>
+  
+  
+    <a href="CheckerTools.html#xsel-instance-method" class="tooltip">
+      <span>xsel</span>
+    xsel</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="WordTools.html">WordTools</a></code></h3>
+  
+  
+    <a href="WordTools.html#file_formatter(filename:String)-instance-method" class="tooltip">
+      <span>file_formatter(filename : String)</span>
+    file_formatter</a>, 
+    
+  
+    <a href="WordTools.html#formatter(s:String)-instance-method" class="tooltip">
+      <span>formatter(s : String)</span>
+    formatter</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="spell-instance-method">
+      <div class="signature">
+        
+        def <strong>spell</strong>
+
+        <a class="method-permalink" href="#spell-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/speller.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

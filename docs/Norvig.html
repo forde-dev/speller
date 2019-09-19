@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/fordetek/speller">
+  <title>Norvig - github.com/fordetek/speller</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Checker" data-name="checker">
+      <a href="Checker.html">Checker</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/CheckerTools" data-name="checkertools">
+      <a href="CheckerTools.html">CheckerTools</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Hasher" data-name="hasher">
+      <a href="Hasher.html">Hasher</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/fordetek/speller/Norvig" data-name="norvig">
+      <a href="Norvig.html">Norvig</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/NumberTools" data-name="numbertools">
+      <a href="NumberTools.html">NumberTools</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/Speller" data-name="speller">
+      <a href="Speller.html">Speller</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/fordetek/speller/WordTools" data-name="wordtools">
+      <a href="WordTools.html">WordTools</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Norvig
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p><code><a href="Norvig.html">Norvig</a></code> is an algorithm designed by Peter Norvig
+to demonstrate how a spell corrector works</p>
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="Hasher.html">Hasher</a></li>
+  
+    <li class="other-type"><a href="NumberTools.html">NumberTools</a></li>
+  
+    <li class="other-type"><a href="WordTools.html">WordTools</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="Speller.html">Speller</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/norvig.cr#L25" target="_blank">
+        norvig.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BIG_BOOK">
+        <strong>BIG_BOOK</strong> = <code><span class="s">&quot;data/big_en_book.txt&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><code><a href="Norvig.html#BIG_BOOK">BIG_BOOK</a></code> is a book with alot of english words in it</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="LETTERS">
+        <strong>LETTERS</strong> = <code>[<span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>, <span class="s">&quot;c&quot;</span>, <span class="s">&quot;d&quot;</span>, <span class="s">&quot;e&quot;</span>, <span class="s">&quot;f&quot;</span>, <span class="s">&quot;g&quot;</span>, <span class="s">&quot;h&quot;</span>, <span class="s">&quot;i&quot;</span>, <span class="s">&quot;j&quot;</span>, <span class="s">&quot;k&quot;</span>, <span class="s">&quot;l&quot;</span>, <span class="s">&quot;m&quot;</span>, <span class="s">&quot;n&quot;</span>, <span class="s">&quot;o&quot;</span>, <span class="s">&quot;p&quot;</span>, <span class="s">&quot;q&quot;</span>, <span class="s">&quot;r&quot;</span>, <span class="s">&quot;s&quot;</span>, <span class="s">&quot;t&quot;</span>, <span class="s">&quot;u&quot;</span>, <span class="s">&quot;v&quot;</span>, <span class="s">&quot;w&quot;</span>, <span class="s">&quot;x&quot;</span>, <span class="s">&quot;y&quot;</span>, <span class="s">&quot;z&quot;</span>]</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><code><a href="Norvig.html#LETTERS">LETTERS</a></code> are all the letters in the english language</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="NORVIG_WORDS">
+        <strong>NORVIG_WORDS</strong> = <code>hasher(file_formatter(<span class="t">BIG_BOOK</span>))</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><code><a href="Norvig.html#NORVIG_WORDS">NORVIG_WORDS</a></code> is a hash map of all the words in the big book as keys and 
+how often they have appeared as values</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#corrector_one(word:String)-instance-method" class="signature"><strong>#corrector_one</strong>(word : String)</a>
+        
+          <div class="summary"><p><code>corrector</code> takes in a miss spelt word as a string and corrects the spelling error of one letter </p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#corrector_two(word:String)-instance-method" class="signature"><strong>#corrector_two</strong>(word : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#known(words:Array)-instance-method" class="signature"><strong>#known</strong>(words : Array)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#probability(word:String)-instance-method" class="signature"><strong>#probability</strong>(word : String)</a>
+        
+          <div class="summary"><p><code>probaility</code> takes in a known word as a string and returns the probility of that word to be used in any piece of text </p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="NumberTools.html">NumberTools</a></code></h3>
+  
+  
+    <a href="NumberTools.html#sum(elements)-instance-method" class="tooltip">
+      <span>sum(elements)</span>
+    sum</a>, 
+    
+  
+    <a href="NumberTools.html#sum_f64(elements)-instance-method" class="tooltip">
+      <span>sum_f64(elements)</span>
+    sum_f64</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="WordTools.html">WordTools</a></code></h3>
+  
+  
+    <a href="WordTools.html#file_formatter(filename:String)-instance-method" class="tooltip">
+      <span>file_formatter(filename : String)</span>
+    file_formatter</a>, 
+    
+  
+    <a href="WordTools.html#formatter(s:String)-instance-method" class="tooltip">
+      <span>formatter(s : String)</span>
+    formatter</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="Hasher.html">Hasher</a></code></h3>
+  
+  
+    <a href="Hasher.html#hasher(words:Array)-instance-method" class="tooltip">
+      <span>hasher(words : Array)</span>
+    hasher</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="corrector_one(word:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>corrector_one</strong>(word : String)
+
+        <a class="method-permalink" href="#corrector_one(word:String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>corrector</code> takes in a miss spelt word as a string and
+corrects the spelling error of one letter </p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/norvig.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="corrector_two(word:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>corrector_two</strong>(word : String)
+
+        <a class="method-permalink" href="#corrector_two(word:String)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/norvig.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="known(words:Array)-instance-method">
+      <div class="signature">
+        
+        def <strong>known</strong>(words : Array)
+
+        <a class="method-permalink" href="#known(words:Array)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/norvig.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="probability(word:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>probability</strong>(word : String)
+
+        <a class="method-permalink" href="#probability(word:String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>probaility</code> takes in a known word as a string and returns
+the probility of that word to be used in any piece of text </p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/fordetek/speller/blob/95abef6f6607a3216d7e57f205cdfa3cdfb540aa/src/norvig.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
