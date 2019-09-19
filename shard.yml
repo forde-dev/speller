@@ -1,0 +1,13 @@
+name: speller
+version: 0.1.0
+
+authors:
+  - Michael Forde <mf@cix.ie>
+
+targets:
+  speller:
+    main: src/speller.cr
+
+crystal: 0.29.0
+
+license: MIT

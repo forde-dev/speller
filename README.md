@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Speller
 To be system wide spellcheaker using crystal
 
@@ -22,3 +23,32 @@ To be system wide spellcheaker using crystal
 for example i highlighted all the text above *Current Output* and ran the program, this was the current output:
 ![image](/img/speller_test.png)
 note: i cant spell, hence why im doing this project
+=======
+# speller
+
+TODO: Write a description here
+
+## Installation
+
+TODO: Write installation instructions here
+
+## Usage
+
+TODO: Write usage instructions here
+
+## Development
+
+TODO: Write development instructions here
+
+## Contributing
+
+1. Fork it (<https://github.com/your-github-user/speller/fork>)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## Contributors
+
+- [Michael Forde](https://github.com/your-github-user) - creator and maintainer
+>>>>>>> origin/restucture
