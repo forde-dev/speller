@@ -13,9 +13,14 @@ module Speller
   def spell
     errors = spell_checker(LANG)
     if errors
+      puts "Errors with the following words:"
       errors.each do |w|
+        puts w + ":"
         words = corrector_one(w)
-        puts known(words)
+        fixes = known(words)
+        fixes.each do |f|
+          puts f
+        end
       end
     end
   end

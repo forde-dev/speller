@@ -2,7 +2,7 @@ name: speller
 version: 0.1.0
 
 authors:
-  - Michael Forde <mf@cix.ie>
+  - Michael Forde <fordetek@gmail.com>
 
 targets:
   speller:

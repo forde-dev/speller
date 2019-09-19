@@ -34,7 +34,7 @@ module Checker
         if arry.empty?
           puts "There is no spelling errors"
         else
-          puts "spelling_error", arry
+          puts "spelling_error"
           return arry
         end
     end

@@ -1,44 +1,18 @@
-<<<<<<< HEAD
-# Speller
-To be system wide spellcheaker using crystal
-
-#### How it will work:
-
-* the user highlights a word or words(paragraphs or sentances) and runs this program,
-  could be a keyboard short cut. (completed)
-
-* the program detects spelling errors in the highlighted text and tells you whats spelt wrong (completed)
-
-* the user will have the option to add or blacklist words for there own system dictionary (not started)
-
-* the program uses an algrithm to figure out best matching words to replace the spelling errors (not started)
-
-* the program will intergret with some sorta notification or gui system to display the spelling mistakes (not started)
-
-#### Requirements
-
-* this application requires `xsel`. for arch `pacman -S xsel`
-
-#### Current Output
-for example i highlighted all the text above *Current Output* and ran the program, this was the current output:
-![image](/img/speller_test.png)
-note: i cant spell, hence why im doing this project
-=======
 # speller
 
-TODO: Write a description here
+Speller is a tool to give spelling suggestions on incorrectly spelled words simply by highligthing the text that you want to scan for spelling mistakes
 
 ## Installation
 
-TODO: Write installation instructions here
+1. Clone this repo.
+2. cd into repo
+3. highlight text to check
+4. Run `crystal ./src/speller.cr`
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+for usage, i would recommend compiling this repo and adding it to your `/usr/local/bin/`
+and run it using terminal once something is highlighted, or bind it to a keyboard shortcut
 
 ## Contributing
 
@@ -50,5 +24,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Michael Forde](https://github.com/your-github-user) - creator and maintainer
->>>>>>> origin/restucture
+- [Michael Forde](https://github.com/fordetek/) - creator and maintainer
